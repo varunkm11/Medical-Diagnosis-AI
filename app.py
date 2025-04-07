@@ -10,3 +10,11 @@ vectorizer = joblib.load("model/tfidf_vectorizer.pkl")
 
 st.title("🩺 AI Medical Diagnosis")
 st.write("Enter your symptoms and get a possible disease prediction.(Disclaimer: Do not trust 100%)")
+
+#Input
+symptom_input = st.text_area("📝 Describe your symptoms (e.g., fever, cough, body pain)")
+
+if st.button("🔍 Diagnose"):
+    if symptom_input.strip():
+        X_input = vectorizer.transform([symptom_input])
+        prediction = model.predict(X_input)[0]
