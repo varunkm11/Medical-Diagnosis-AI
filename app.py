@@ -18,3 +18,7 @@ if st.button("🔍 Diagnose"):
     if symptom_input.strip():
         X_input = vectorizer.transform([symptom_input])
         prediction = model.predict(X_input)[0]
+        st.success(f"🤖 Based on your input, you may have: **{prediction}**")
+        st.warning("⚠️ This is an AI prediction. Do not trust it 100%. Consult a doctor for accurate diagnosis.")
+else:
+    st.error("Please enter symptoms.")
