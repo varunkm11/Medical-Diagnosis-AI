@@ -10,4 +10,12 @@ x = df["symptoms"]
 y = df["disease"]
 
 vectorizer = TfidfVectorizer()
-x_vec = vectorizer
+x_vec = vectorizer.fit_transform(x)
+
+model = LogisticRegression()
+model.fit(x_vec, y)
+
+#save Model ANd vectorizer
+os.makedirs("model, exist_ok=True")
+joblib.dump(model, "model/diagnosis_model.pkl")
+joblib.dump(vectorizer,"model/tfidf_vectorizer.pkl")
