@@ -7,13 +7,20 @@ from sklearn.linear_model import LogisticRegression
 
 #check if model files exist
 if not os.path.exists("model/diagnosis_model.pkl") or not os.path.exists("model/tfid_vectorizer.pkl"):
-
+    st.error("⚠️ Model files not found! Make sure you've trained and saved your model in the 'model' folder.")
+    st.stop()
 #Load Model and Vectorizer
 model = joblib.load("model/diagnosis_model.pkl")
 vectorizer = joblib.load("model/tfidf_vectorizer.pkl")
 
-st.title("🩺 AI Medical Diagnosis")
-st.write("Enter your symptoms and get a possible disease prediction.(Disclaimer: Do not trust 100%)")
+#streamlit App Title and description
+st.markdown(
+    """
+    <h1 style='text-align:center;'>🩺 AI Medical Diagnosis App</h1>
+    <p style='text-align:center;'>Enter your symptoms and get a possible disease prediction.<br>
+    """,
+    unsafe_allow_html=True
+)
 
 #Input
 symptom_input = st.text_area("📝 Describe your symptoms (e.g., fever, cough, body pain)")
