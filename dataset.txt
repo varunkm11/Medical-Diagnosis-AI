@@ -1,0 +1,6 @@
+symptoms,disease
+"fever, cough, sore throat", Flu
+"chest pain, shortness of breath",Heart Disease
+"headache, nausea, light sensitivity",Migraine
+"joint pain, swelling, fatigue",Arthritis
+"abdominal pain, diarrhea, fever",Food Poisoning

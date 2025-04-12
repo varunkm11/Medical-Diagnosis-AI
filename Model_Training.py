@@ -16,6 +16,6 @@ model = LogisticRegression()
 model.fit(x_vec, y)
 
 #save Model ANd vectorizer
-os.makedirs("model, exist_ok=True")
+os.makedirs("model", exist_ok=True)
 joblib.dump(model, "model/diagnosis_model.pkl")
 joblib.dump(vectorizer,"model/tfidf_vectorizer.pkl")
