@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 #check if model files exist
-if not os.path.exists("model/diagnosis_model.pkl") or not os.path.exists("model/tfid_vectorizer.pkl"):
+if not os.path.exists("model/diagnosis_model.pkl") or not os.path.exists("model/tfidf_vectorizer.pkl"):
     st.error("⚠️ Model files not found! Make sure you've trained and saved your model in the 'model' folder.")
     st.stop()
 #Load Model and Vectorizer
@@ -31,7 +31,7 @@ if st.button("🔍 Diagnose"):
         X_input = vectorizer.transform([symptom_input])
         prediction = model.predict(X_input)[0]
         try:
-            probability = model.predct_proba(X_input).max()*100
+            probability = model.predict_proba(X_input).max()*100
             st.success(f"🤖 Based on your input, you may have: **{prediction}**")
             st.info(f"🧠 AI Confidence: {probability:.2f}%")
         except AttributeError:
