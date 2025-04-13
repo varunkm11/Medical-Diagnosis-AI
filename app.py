@@ -25,11 +25,18 @@ st.markdown(
 #Input
 symptom_input = st.text_area("📝 Describe your symptoms (e.g., fever, cough, body pain)")
 
+#diagnosis button
 if st.button("🔍 Diagnose"):
     if symptom_input.strip():
         X_input = vectorizer.transform([symptom_input])
         prediction = model.predict(X_input)[0]
-        st.success(f"🤖 Based on your input, you may have: **{prediction}**")
+        try:
+            probability = model.predct_proba(X_input).max()*100
+            st.success(f"🤖 Based on your input, you may have: **{prediction}**")
+            st.info(f"🧠 AI Confidence: {probability:.2f}%")
+        except AttributeError:
+            #if model doesn;t support predict_proba
+                st.success(f"🤖 Based on your input, you may have: **{prediction}**")
         st.warning("⚠️ This is an AI prediction. Do not trust it 100%. Consult a doctor for accurate diagnosis.")
 else:
-    st.error("Please enter symptoms.")
+    st.error("Please enter your symptoms  before clicking Diagnosis.")
