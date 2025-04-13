@@ -1,0 +1,31 @@
+symptoms,disease
+"fever, cough, sore throat",Flu
+"chest pain, shortness of breath",Heart Disease
+"headache, nausea, light sensitivity",Migraine
+"joint pain, swelling, fatigue",Arthritis
+"abdominal pain, diarrhea, fever",Food Poisoning
+"rash, itching, sneezing",Allergy
+"weight loss, frequent urination, fatigue",Diabetes
+"persistent sadness, loss of interest, fatigue",Depression
+"high fever, chills, sweating, muscle pain",Malaria
+"skin redness, pus, pain",Skin Infection
+"frequent headaches, blurred vision, dizziness",Hypertension
+"severe stomach pain, vomiting, nausea",Appendicitis
+"loss of memory, confusion, trouble speaking",Alzheimer's Disease
+"fever, stiff neck, sensitivity to light",Meningitis
+"uncontrolled shaking, slurred speech, numbness",Stroke
+"fatigue, pale skin, shortness of breath",Anemia
+"wheezing, shortness of breath, chest tightness",Asthma
+"painful urination, frequent urge to urinate",Urinary Tract Infection
+"numbness, tingling, muscle weakness",Multiple Sclerosis
+"swollen lymph nodes, night sweats, fever",Lymphoma
+"itchy scalp, dandruff, hair loss",Fungal Infection
+"muscle stiffness, tremors, slow movement",Parkinson's Disease
+"persistent cough with blood, weight loss",Tuberculosis
+"abdominal cramps, bloating, gas",Irritable Bowel Syndrome
+"ear pain, hearing loss, fluid discharge",Ear Infection
+"vision loss, eye pain, redness",Glaucoma
+"dry mouth, difficulty swallowing, joint pain",Sjogren's Syndrome
+"extreme thirst, blurred vision, slow healing",Diabetes
+"back pain, leg numbness, weakness",Sciatica
+"fever, dry cough, loss of taste or smell",COVID-19
